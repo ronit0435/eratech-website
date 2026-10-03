@@ -92,11 +92,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               <span className="uppercase font-mono text-[11px] text-neutral-700 tracking-wider">Digital Engineering & Performance Systems</span>
             </div>
 
-            {/* Big Pencil-Style Headline: "We Believe in Future Prediction" */}
+            {/* Big Pencil-Style Headline: "We Design Your Digital Future " */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#2B2B2B] tracking-tight leading-[1.12] text-balance">
-              We Believe in{' '}
+              We Design Your{' '}
               <span className="relative inline-block font-hand font-bold text-[#2B2B2B] rotate-[-1deg] text-5xl sm:text-6xl md:text-7xl">
-                Future Prediction
+               Digital Future
                 {/* Hand-drawn pencil underline in #B53CB5 */}
                 <PencilUnderline color="#B53CB5" className="absolute -bottom-2 left-0 right-0 h-4" />
               </span>
