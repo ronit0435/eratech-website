@@ -1,0 +1,368 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-paper: #F4F4F2;
+    --paper-grid: rgba(43, 43, 43, 0.05);
+    --paper-grid-major: rgba(43, 43, 43, 0.09);
+    --charcoal: #2B2B2B;
+    --graphite: #4A4A4A;
+    --pencil-line: rgba(74, 74, 74, 0.25);
+    --accent: #B53CB5;
+    --accent-hover: #9E2B9E;
+    --accent-light: rgba(181, 60, 181, 0.12);
+    --accent-amber: #D97706;
+  }
+
+  body {
+    background-color: var(--bg-paper);
+    color: var(--charcoal);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Handwritten / Pencil Accents */
+.font-hand {
+  font-family: 'Kalam', 'Caveat', cursive;
+}
+
+.font-caveat {
+  font-family: 'Caveat', cursive;
+}
+
+/* Blueprint / Graph Paper Grid Pattern */
+.bg-graph-paper {
+  background-image: 
+    linear-gradient(to right, var(--paper-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--paper-grid) 1px, transparent 1px),
+    linear-gradient(to right, var(--paper-grid-major) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--paper-grid-major) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px, 120px 120px, 120px 120px;
+}
+
+.bg-paper-texture {
+  background-color: #F4F4F2;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Card Classes: 10% transparent (90% paper style) with no glassy double border */
+.glass-nav {
+  background: rgba(244, 244, 242, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(43, 43, 43, 0.10);
+  box-shadow: 0 4px 20px -8px rgba(43, 43, 43, 0.06);
+}
+
+.glass-card {
+  background: rgba(246, 246, 243, 0.90);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(43, 43, 43, 0.13);
+  box-shadow: 0 3px 12px -3px rgba(43, 43, 43, 0.05), 0 1px 3px rgba(43, 43, 43, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(181, 60, 181, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -5px rgba(43, 43, 43, 0.08);
+}
+
+.glass-search {
+  background: rgba(246, 246, 243, 0.90);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(43, 43, 43, 0.13);
+  box-shadow: 0 3px 10px -3px rgba(43, 43, 43, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-search:focus-within {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(181, 60, 181, 0.50);
+  box-shadow: 0 8px 20px -4px rgba(43, 43, 43, 0.07), 0 0 0 2px rgba(181, 60, 181, 0.15);
+}
+
+/* General animated interactive card utility */
+.card-interactive {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-interactive:hover {
+  transform: translateY(-5px);
+  border-color: rgba(163, 0, 163, 0.35) !important;
+  box-shadow: 0 16px 36px -8px rgba(43, 43, 43, 0.07), 0 4px 18px -2px rgba(163, 0, 163, 0.14);
+}
+
+/* Image hover effect on cards */
+.glass-card img {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover img {
+  transform: scale(1.04);
+}
+
+.glass-card-subtle {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 20px -4px rgba(43, 43, 43, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-subtle:hover {
+  background: rgba(255, 255, 255, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px -8px rgba(43, 43, 43, 0.08), 0 4px 16px -4px rgba(163, 0, 163, 0.1);
+}
+
+/* Paper Craft Elements: Tape, Clip, Folded Corners, Notes */
+.tape-strip {
+  position: relative;
+}
+.tape-strip::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 90px;
+  height: 24px;
+  background: rgba(243, 235, 208, 0.85);
+  border-left: 2px dashed rgba(200, 190, 160, 0.6);
+  border-right: 2px dashed rgba(200, 190, 160, 0.6);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tape-corner-tl::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -12px;
+  transform: rotate(-35deg);
+  width: 60px;
+  height: 20px;
+  background: rgba(246, 238, 215, 0.85);
+  border-left: 1px dashed rgba(180, 170, 140, 0.5);
+  border-right: 1px dashed rgba(180, 170, 140, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tape-corner-tr::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -12px;
+  transform: rotate(35deg);
+  width: 60px;
+  height: 20px;
+  background: rgba(246, 238, 215, 0.85);
+  border-left: 1px dashed rgba(180, 170, 140, 0.5);
+  border-right: 1px dashed rgba(180, 170, 140, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Sticky Note Styles */
+.sticky-note-yellow {
+  background: #FFF9DB;
+  box-shadow: 0 8px 24px -4px rgba(180, 160, 100, 0.25), 0 2px 6px rgba(0,0,0,0.04);
+  border-bottom-right-radius: 20px 4px;
+}
+
+.sticky-note-purple {
+  background: #FAF0FA;
+  box-shadow: 0 8px 24px -4px rgba(163, 0, 163, 0.16), 0 2px 6px rgba(0,0,0,0.04);
+  border-bottom-right-radius: 20px 4px;
+}
+
+.sticky-note-green {
+  background: #EBF7EE;
+  box-shadow: 0 8px 24px -4px rgba(60, 160, 80, 0.18), 0 2px 6px rgba(0,0,0,0.04);
+  border-bottom-right-radius: 20px 4px;
+}
+
+/* Folded Corner */
+.folded-corner {
+  position: relative;
+  background: #ffffff;
+}
+.folded-corner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 24px 24px;
+  border-color: transparent transparent #E0E0DC transparent;
+  box-shadow: -2px -2px 3px rgba(0,0,0,0.06);
+}
+
+/* Sketchy Borders */
+.border-sketch {
+  border: 1.5px solid rgba(74, 74, 74, 0.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.border-sketch-subtle {
+  border: 1px dashed rgba(74, 74, 74, 0.25);
+}
+
+/* Pencil Underline Effect */
+.pencil-underline {
+  position: relative;
+  display: inline-block;
+}
+.pencil-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: currentColor;
+  opacity: 0.8;
+  border-radius: 3px;
+  transform: rotate(-0.5deg);
+}
+
+/* 3D Perspective Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F4F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4D4D0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B53CB5;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Animated Paper Flight & Cosmic Jupiter Keyframes (Continuous & Distinct)
+   ───────────────────────────────────────────────────────────── */
+@keyframes paperPlaneSway {
+  0% {
+    transform: translate(0px, 0px) rotate(5deg);
+  }
+  25% {
+    transform: translate(35px, -22px) rotate(-3deg);
+  }
+  50% {
+    transform: translate(70px, 10px) rotate(8deg);
+  }
+  75% {
+    transform: translate(35px, 26px) rotate(1deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(5deg);
+  }
+}
+
+@keyframes paperJetCruise {
+  0% {
+    transform: translate(0px, 0px) rotate(-14deg);
+  }
+  30% {
+    transform: translate(-50px, -24px) rotate(-18deg);
+  }
+  70% {
+    transform: translate(-95px, 16px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(-14deg);
+  }
+}
+
+@keyframes paperPathDraw {
+  0% {
+    stroke-dashoffset: 48;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Animated Tech Floating & AI Face Keyframes
+   ───────────────────────────────────────────────────────────── */
+@keyframes techFloatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes techFloatAlternate {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-1.5deg);
+  }
+}
+
+@keyframes aiBlink {
+  0%, 88%, 94%, 100% {
+    transform: scaleY(1);
+  }
+  91% {
+    transform: scaleY(0.1);
+  }
+}
+
+.animate-tech-float {
+  animation: techFloatSlow 6s ease-in-out infinite;
+}
+
+.animate-tech-float-alt {
+  animation: techFloatAlternate 7s ease-in-out infinite;
+}
+
+.animate-tech-float-delayed {
+  animation: techFloatSlow 8s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.animate-tech-float-slow {
+  animation: techFloatAlternate 9s ease-in-out infinite;
+  animation-delay: -4.5s;
+}
+
+.animate-tech-float-fast {
+  animation: techFloatSlow 5.5s ease-in-out infinite;
+  animation-delay: -1.8s;
+}
+
+.animate-ai-blink {
+  animation: aiBlink 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
