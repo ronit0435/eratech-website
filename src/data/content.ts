@@ -341,7 +341,7 @@ export const FOUNDER_INFO = {
   role: 'Founder & Lead Technical Architect',
   agency: 'EraTech',
   location: 'Mohali, Punjab, India',
-  image: '/src/assets/images/ronit_founder_portrait_1790948970306.jpg',
+  image: '/src/assets/images/ronit_founder_portrait_1790948970306.jpeg',
   experience: '5+ Years in Full-Stack & Growth Systems',
   bio: 'Ronit is the founder and lead technical architect of EraTech. Combining a passion for clean, mathematical software architecture with algorithmic search intelligence, Ronit personally oversees every client blueprint—from initial wireframing to production deployment and growth scaling.',
   quote: 'We treat every client digital system like mission-critical infrastructure: engineered to load instantly, convert intent cleanly, and compound in business value over time.',
