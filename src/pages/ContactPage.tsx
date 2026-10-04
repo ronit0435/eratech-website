@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { supabase } from '../lib/supabase';
 import { PageId } from '../types';
 import { COMPANY_INFO } from '../data/content';
 import { Phone, Mail, MapPin, Send, MessageCircle, Clock, CheckCircle2 } from 'lucide-react';
@@ -44,25 +45,85 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate: _onNavigat
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!validate()) return;
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      try {
-        confetti({
-          particleCount: 85,
-          spread: 60,
-          origin: { y: 0.6 }
-        });
-      } catch {
-        // fallback
+  if (!validate()) return;
+
+  setLoading(true);
+
+  try {
+    // 1. Save inquiry in Supabase
+    const { error: dbError } = await supabase
+      .from("contact_inquiries")
+      .insert([
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          budget: formData.budget,
+          timeline: formData.timeline,
+          preferred_channel: formData.preferredChannel,
+          message: formData.message,
+          nda_requested: formData.ndaRequested,
+        },
+      ]);
+
+    if (dbError) {
+      console.error("Database error:", dbError);
+      alert("Something went wrong while submitting your inquiry.");
+      return;
+    }
+
+    // 2. Send email notification
+    const { error: emailError } = await supabase.functions.invoke(
+      "send-contact-email",
+      {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          budget: formData.budget,
+          timeline: formData.timeline,
+          preferredChannel: formData.preferredChannel,
+          message: formData.message,
+          ndaRequested: formData.ndaRequested,
+        },
       }
-    }, 600);
-  };
+    );
+
+    if (emailError) {
+      console.error("Email error:", emailError);
+
+      // Database entry is already saved,
+      // so don't tell user that the whole submission failed.
+      alert(
+        "Your inquiry was submitted successfully, but email notification could not be sent."
+      );
+      return;
+    }
+
+    // 3. Success
+    setSubmitted(true);
+
+    try {
+      confetti({
+        particleCount: 85,
+        spread: 60,
+        origin: { y: 0.6 },
+      });
+    } catch {
+      // fallback
+    }
+  } catch (error) {
+    console.error("Submit error:", error);
+    alert("Something went wrong. Please try again.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="relative w-full py-10 px-4 md:px-8 overflow-hidden">
