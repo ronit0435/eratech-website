@@ -148,23 +148,23 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate: _onNavigate, o
             </h1>
 
             <p className="text-sm sm:text-base text-neutral-700 leading-relaxed font-normal">
-              In 2021, EraTech was founded in <span className="font-semibold text-neutral-900">Mohali, Punjab</span> with a single notebook of architectural wireframes and a clear mandate: <span className="italic font-medium">&ldquo;We Believe in Future Prediction&rdquo;</span>.
+              In 2025, EraTech was founded in <span className="font-semibold text-neutral-900">Mohali, India</span> with a single notebook of architectural wireframes and a clear mandate: <span className="italic font-medium">&ldquo;We Believe in Future Prediction&rdquo;</span>.
             </p>
 
             <p className="text-sm text-neutral-600 leading-relaxed">
-              We observed that most agencies delivered sluggish templates, bloated plugins, and opaque vanity metrics that failed to drive commercial bottom lines. We set out to build an engineering-led agency that treats web architecture like structural engineering—precise, mathematically balanced, sub-second fast, and calibrated for compounding inbound revenue.
+              We observed that most agencies delivered sluggish templates, bloated plugins, and opaque vanity metrics that failed to drive commercial bottom lines. We set out to build an engineering-led agency that treats web architecture like structural engineering-precise, mathematically balanced, sub-second fast, and calibrated for compounding inbound revenue.
             </p>
 
             {/* Handwritten callout */}
             <div className="p-3.5 rounded-2xl bg-[#FFF9DB] border border-[#E8DC9C] font-hand text-sm text-neutral-800 -rotate-0.5 inline-block shadow-xs">
-              📍 Headquartered in Mohali, Punjab · Engineering for North India & Global Enterprises
+              📍 Headquartered in Mohali, India · Engineering for North India & Global Enterprises
             </div>
 
           </div>
 
           {/* Rulers and Spec mark on bottom */}
           <div className="mt-8 pt-6 border-t border-neutral-200/80 flex items-center justify-between text-xs text-neutral-500 font-mono">
-            <div>EST. 2021 · MOHALI, PUNJAB</div>
+            <div>EST. 2025 · MOHALI, INDIA</div>
             <RulerMarks />
             <div>ISO STANDARD CODE QUALITY</div>
           </div>
@@ -201,7 +201,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate: _onNavigate, o
               </div>
               <h2 className="text-xl font-bold text-[#2B2B2B]">Our Vision</h2>
               <p className="text-xs sm:text-sm text-neutral-600 mt-2.5 leading-relaxed">
-                To be North India&apos;s benchmark digital solutions and marketing laboratory—recognized for technical craftsmanship, mathematical precision, and absolute accountability to client outcomes.
+                To be North India&apos;s benchmark digital solutions and marketing laboratory-recognized for technical craftsmanship, mathematical precision, and absolute accountability to client outcomes.
               </p>
             </div>
             <div className="mt-6 pt-4 border-t border-neutral-200 text-xs font-hand text-neutral-500">
@@ -274,7 +274,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate: _onNavigate, o
               The Architecture Behind EraTech
             </h2>
             <p className="text-sm text-neutral-600 mt-2">
-              Direct access to our founder and lead technical architect in Mohali, Punjab.
+              Direct access to our founder and lead technical architect in Mohali, India.
             </p>
           </div>
 
@@ -298,7 +298,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate: _onNavigate, o
                   {/* Subtle Gradient Scrim at bottom of photo */}
                   <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/85 via-black/35 to-transparent text-white">
                     <span className="font-bold text-base block">{FOUNDER_INFO.name}</span>
-                    <span className="text-xs text-amber-300 font-mono">Mohali, Punjab, India</span>
+                    <span className="text-xs text-amber-300 font-mono">Mohali, India</span>
                   </div>
                 </div>
 
@@ -320,7 +320,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate: _onNavigate, o
                   </h3>
                   <div className="flex items-center gap-2 text-xs text-neutral-600 font-medium mt-1">
                     <MapPin className="w-3.5 h-3.5 text-[#B53CB5]" />
-                    <span>Mohali, Punjab · {FOUNDER_INFO.experience}</span>
+                    <span>Mohali, India · {FOUNDER_INFO.experience}</span>
                   </div>
                 </div>
 

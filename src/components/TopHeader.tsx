@@ -75,7 +75,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({ onNavigate }) => {
         <div className="hidden lg:flex items-center gap-5 text-xs text-neutral-600">
           <div className="flex items-center gap-2">
             <MapPin className="w-3.5 h-3.5 text-[#3B4CCA]" />
-            <span className="font-medium text-neutral-700">Dadu Majra, Mohali, Punjab</span>
+            <span className="font-medium text-neutral-700">Dadu Majra, Mohali, India</span>
           </div>
           <RulerMarks className="opacity-50" />
           <CrosshairMark />

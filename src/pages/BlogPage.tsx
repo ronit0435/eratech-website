@@ -318,7 +318,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate: _onNavigate, onO
                       <span className="text-neutral-400 font-normal">({activePost.authorRole})</span>
                     </div>
                     <div className="text-[11px] text-neutral-500 font-mono">
-                      Published {activePost.date} · Mohali, Punjab
+                      Published {activePost.date} · Mohali, India
                     </div>
                   </div>
                 </div>
@@ -476,7 +476,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate: _onNavigate, onO
             </h1>
 
             <p className="text-xs sm:text-sm text-neutral-600 font-normal max-w-2xl mx-auto leading-relaxed">
-              Pragmatic breakdowns of modern web engineering, algorithmic SEO shifts, and predictive pipeline architecture by Ronit in Mohali.
+              Pragmatic breakdowns of modern web engineering, algorithmic SEO shifts, and predictive pipeline architecture by EraTech.
             </p>
           </div>
 

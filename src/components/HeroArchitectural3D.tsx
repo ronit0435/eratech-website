@@ -138,7 +138,7 @@ export const HeroArchitectural3D: React.FC = () => {
           <div className="flex items-center gap-2">
             <span className="text-sm">📍</span>
             <div>
-              <div className="font-bold text-[11px] text-neutral-800">Mohali, Punjab</div>
+              <div className="font-bold text-[11px] text-neutral-800">Mohali, India</div>
               <div className="font-hand text-[10px] text-neutral-600">Headquarters & Tech Studio</div>
             </div>
           </div>

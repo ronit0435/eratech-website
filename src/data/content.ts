@@ -1,5 +1,8 @@
 import { ServiceItem, CaseStudy, BlogPost, TeamMember, AnimePoster, Testimonial } from '../types';
 import founderImage from '../assets/images/ronit_founder_portrait_1790948970306.jpeg';
+import architectImage from '../assets/images/sketch_architect_blueprint_1790956655046.jpg';
+import craftsmanImage from '../assets/images/sketch_craftsman_table_1790956671404.jpg';
+import futureCityImage from '../assets/images/sketch_future_city_1790956697134.jpg';
 
 export const COMPANY_INFO = {
   name: 'EraTech',
@@ -7,11 +10,11 @@ export const COMPANY_INFO = {
   tagline: 'We Believe in Future Prediction',
   phone: '+91 88722 82955',
   phoneClean: '+918872282955',
-  email: 'ronit201103@gmail.com',
-  address: 'Mohali, Punjab, India',
+  email: 'eratech.inquiries@gmail.com',
+  address: 'Mohali, India',
   whatsappUrl: 'https://wa.me/918872282955?text=Hello%20EraTech,%20I%20would%20like%20to%20consult%20on%20a%20Web%20Development%20/%20Digital%20Marketing%20project.',
-  workingHours: 'Monday – Saturday: 9:30 AM – 7:00 PM IST',
-  establishedYear: 2021,
+  workingHours: 'Monday – Saturday: 9:30 AM – 6:30 PM IST',
+  establishedYear: 2026,
   mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54873.5432098223!2d76.67844885820311!3d30.704648799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef9302684b0d%3A0x9c3132cf07b8b7e2!2sSahibzada%20Ajit%20Singh%20Nagar%2C%20Punjab!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin',
 };
 
@@ -54,7 +57,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'performance-seo',
     category: 'marketing',
     title: 'Technical & Local Organic SEO',
-    shortDesc: 'Rank at the top of Google searches for high-intent queries across Mohali, Punjab, and nationwide with ethical, data-backed optimization.',
+    shortDesc: 'Rank at the top of Google searches for high-intent queries across Mohali, India, and nationwide with ethical, data-backed optimization.',
     fullDesc: 'Get discovered by customers who are actively searching for your services. We implement structured Schema.org markup, complete keyword research, Google Business Profile ranking, and speed enhancements that Google favors.',
     deliverables: [
       'Comprehensive Website Audit & Fixes',
@@ -126,7 +129,7 @@ export const PRICING_PLANS = [
     code: '01. SPRINT',
     title: 'Starter Business Web Sprint',
     description: 'Perfect for small businesses, local services, and professionals in Mohali wanting a modern, credible, high-speed digital presence.',
-    price: '₹12,000',
+    price: '$199',
     priceSubtitle: 'one-time complete package',
     isPopular: false,
     deliverables: [
@@ -144,7 +147,7 @@ export const PRICING_PLANS = [
     code: '02. FULL PLATFORM',
     title: 'Growth Web & App Architecture',
     description: 'Comprehensive custom web development or online store tailored for growing brands looking to scale customer acquisition.',
-    price: '₹28,000',
+    price: '$499',
     priceSubtitle: 'turnkey bespoke deployment',
     isPopular: true,
     deliverables: [
@@ -162,7 +165,7 @@ export const PRICING_PLANS = [
     code: '03. RETAINER',
     title: 'Digital Marketing & SEO Growth',
     description: 'Continuous monthly management to generate consistent inquiries, rank higher on Google, and run profitable ad campaigns.',
-    price: '₹15,000',
+    price: '$299  ',
     priceSubtitle: 'per month partnership',
     isPopular: false,
     deliverables: [
@@ -304,7 +307,7 @@ export const TESTIMONIALS: Testimonial[] = [
     clientName: 'Harpreet Singh',
     role: 'Managing Director',
     company: 'Apex Transline',
-    location: 'Mohali, Punjab',
+    location: 'Mohali, India',
     quote: 'EraTech built our fleet dispatch portal from scratch on time and on budget. Their pencil wireframes gave us complete confidence before any code was written. Our dispatch speed increased by over 60%.',
     serviceReceived: 'Custom Web Application',
     rating: 5,
@@ -316,7 +319,7 @@ export const TESTIMONIALS: Testimonial[] = [
     clientName: 'Dr. Simran Kaur',
     role: 'Clinical Director',
     company: 'Lifeline Speciality Clinics',
-    location: 'Mohali, Punjab',
+    location: 'Mohali, India',
     quote: 'Within 4 months of EraTech taking over our search marketing and web architecture, our organic patient inquiries more than doubled. Ronit is transparent, sharp, and genuinely invested in client success.',
     serviceReceived: 'Technical SEO & Web Redesign',
     rating: 5,
@@ -341,7 +344,7 @@ export const FOUNDER_INFO = {
   name: 'Ronit',
   role: 'Founder & Lead Technical Architect',
   agency: 'EraTech',
-  location: 'Mohali, Punjab, India',
+  location: 'Mohali, India',
   image: founderImage,
   experience: '2+ Years in Full-Stack & Growth Systems',
   bio: 'Ronit is the founder and lead technical architect of EraTech. Combining a passion for clean, mathematical software architecture with algorithmic search intelligence, Ronit personally oversees every client blueprint—from initial wireframing to production deployment and growth scaling.',
@@ -360,7 +363,7 @@ export const ANIME_POSTERS: AnimePoster[] = [
     id: 'poster-1',
     title: 'The Digital Architect',
     theme: 'Blueprint Precision & Future Code',
-    image: '/src/assets/images/sketch_architect_blueprint_1790956655046.jpg',
+    image: architectImage,
     quote: '"Code is the blueprint of tomorrow. We craft every line with architectural foresight."',
     pencilCaption: 'Spec: EraTech Core Visionary Engine v2.6',
     tags: ['Future Prediction', 'Clean Architecture', 'Pencil Drafting']
@@ -369,7 +372,7 @@ export const ANIME_POSTERS: AnimePoster[] = [
     id: 'poster-2',
     title: 'The Modern Craftsman',
     theme: 'From Paper Sketch to Production',
-    image: '/src/assets/images/sketch_craftsman_table_1790956671404.jpg',
+    image: craftsmanImage,
     quote: '"Every breakthrough system begins with a pencil sketch on drafting paper."',
     pencilCaption: 'Drafting: Handcrafted wireframes meeting silicon execution',
     tags: ['Paper to Silicon', 'UI/UX Mastery', 'Graphite Precision']
@@ -378,7 +381,7 @@ export const ANIME_POSTERS: AnimePoster[] = [
     id: 'poster-3',
     title: 'Predictive Horizons',
     theme: 'Digital Cities & Compounding Growth',
-    image: '/src/assets/images/sketch_future_city_1790956697134.jpg',
+    image: futureCityImage,
     quote: '"We do not wait for the digital revolution. We calculate its trajectory."',
     pencilCaption: 'Perspective: Mohali & global technological landscape',
     tags: ['Trajectory Modeling', 'Algorithmic Growth', 'Architectural Vision']
@@ -404,14 +407,14 @@ export const COMPANY_TIMELINE = [
   {
     year: '2026',
     milestone: 'The Modern EraTech Platform & Autonomous Scale',
-    description: 'Operating as the premier digital engineering and performance studio in Mohali, Punjab — executing mission-critical software and high-conversion market systems.'
+    description: 'Operating as the premier digital engineering and performance studio in Mohali, India - executing mission-critical software and high-conversion market systems.'
   }
 ];
 
 export const FAQ_ITEMS = [
   {
-    question: 'Where is EraTech located and do you serve clients outside Punjab?',
-    answer: 'EraTech is proudly headquartered in Mohali, Punjab, India. While we are rooted in Mohali and the Tricity region, our web development and digital marketing infrastructure serves businesses across India, North America, the UK, and the UAE with seamless online collaboration.'
+    question: 'Where is EraTech located and do you serve clients outside India?',
+    answer: 'EraTech is proudly headquartered in Mohali, India. While we are rooted in Mohali and the Tricity region, our web development and digital marketing infrastructure serves businesses across India, North America, the UK, and the UAE with seamless online collaboration.'
   },
   {
     question: 'What is your typical web development delivery timeline?',
@@ -427,7 +430,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'How do I start a project with EraTech?',
-    answer: 'You can click "Get a Quote" on any page to submit your project requirements, call Ronit directly at +91 88722 82955, email ronit201103@gmail.com, or message us directly on WhatsApp. We typically provide a comprehensive scope proposal within 24 hours.'
+    answer: 'You can click "Get a Quote" on any page to submit your project requirements, call directly at +91 88722 82955, email eratech.inquiries@gmail.com, or message us directly on WhatsApp. We typically provide a comprehensive scope proposal within 24 hours.'
   }
 ];
 

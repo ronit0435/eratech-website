@@ -455,7 +455,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
               Notebook Notes from Partners
             </h2>
             <p className="text-sm text-neutral-600 mt-2">
-              Verifiable testimonials from businesses in Mohali, Punjab, and beyond.
+              Verifiable testimonials from businesses in Mohali, India, and beyond.
             </p>
           </div>
 
@@ -526,7 +526,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenQuote }) =
           </h2>
 
           <p className="text-sm sm:text-base text-neutral-600 max-w-xl mx-auto leading-relaxed">
-            Let us draft a comprehensive technical scope and marketing roadmap. Direct consultations available with Ronit in Mohali, Punjab.
+            Let us draft a comprehensive technical scope and marketing roadmap. Direct consultations available with Ronit in Mohali, India.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">

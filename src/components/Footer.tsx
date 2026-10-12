@@ -54,13 +54,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuote }) => {
               </div>
 
               <p className="text-sm text-neutral-600 leading-relaxed max-w-md pt-2">
-                A premier IT solutions and digital media agency rooted in Mohali, Punjab. 
+                A premier IT solutions and digital media agency rooted in Mohali, India. 
                 We engineer performant web architectures and predictive digital marketing pipelines for regional leaders and global enterprises.
               </p>
 
               {/* Hand-drawn note */}
               <div className="inline-block p-2.5 rounded-lg bg-[#FFF9DB] border border-[#E8DC9C]/80 shadow-xs text-xs font-hand text-neutral-700 rotate-1">
-                📍 Headquartered in Mohali, Punjab · Delivering Globally
+                📍 Headquartered in Mohali, India · Delivering Globally
               </div>
 
               <div className="pt-2 flex items-center gap-3">
@@ -107,7 +107,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuote }) => {
             <div>
               <div className="font-semibold text-xs tracking-wider uppercase text-neutral-500 mb-4 flex items-center gap-1.5">
                 <span className="font-hand text-sm text-[#B53CB5]">§</span>
-                Navigation
+                COMPANY
               </div>
               <ul className="space-y-2.5 text-sm">
                 <li>
@@ -193,7 +193,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuote }) => {
                 </a>
                 <div className="flex items-start gap-2 pt-1">
                   <MapPin className="w-3.5 h-3.5 text-[#B53CB5] shrink-0 mt-0.5" />
-                  <span>Mohali, Punjab, India</span>
+                  <span>Mohali, India</span>
                 </div>
               </div>
 

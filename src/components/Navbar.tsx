@@ -150,7 +150,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="p-4 rounded-3xl glass-nav shadow-2xl border border-white flex flex-col gap-2 animate-in fade-in slide-in-from-top-4 duration-200">
             <div className="flex items-center justify-between pb-2 border-b border-neutral-200/60 px-2">
               <span className="font-bold text-sm text-[#2B2B2B]">EraTech</span>
-              <span className="text-[11px] text-neutral-500 font-mono">Mohali, Punjab</span>
+              <span className="text-[11px] text-neutral-500 font-mono">Mohali, India</span>
             </div>
 
             {navItems.map((item) => {
